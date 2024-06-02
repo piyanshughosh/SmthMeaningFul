@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things I wanted to say...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #ff6666, #ff3333);
+            font-family: 'Roboto', sans-serif;
+            color: #444;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 0 20px;
+        }
+        .dialogue-box {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            font-size: 24px;
+            line-height: 1.5;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            font-family: 'Reenie Beanie', cursive;
+        }
+        .dialogue-box:hover {
+            transform: translateY(-5px);
+        }
+        .title {
+            font-size: 42px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            font-family: 'Seymour One', sans-serif; /* Updated font */
+            color: #cc0000; /* Slightly darker and vibrant red color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background-color: #cc0000; /* Slightly darker and vibrant red color */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #a80000; /* Slightly darker shade of red */
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio element for the song -->
+    <audio autoplay loop>
+        <!-- Source of the audio file hosted on the web -->
+        <source src="the_night_we_met_-_lord_huron_(Hydr0.org).mp3" type="audio/mpeg">
+        <!-- Fallback text in case the audio file is not found -->
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <div class="title">Things I wanted to say...</div>
+        <div class="dialogue-box" id="message1">Welcome to Adulthood</div>
+        <div class="dialogue-box hidden" id="message2">You thought I forgot ?? huh, not even in my wildest dreams</div>
+        <div class="dialogue-box hidden" id="message3">So here you are stepping into adulthood, about to embark on an amazing journey ahead</div>
+        <div class="dialogue-box hidden" id="message4">And as you move along this path of life, I know you will keep adding colors wherever you go, with your presence</div>
+        <div class="dialogue-box hidden" id="message5">And I just wanna be your fellow traveler, travelling beside you along the woods of life</div>
+        <div class="dialogue-box hidden" id="message6">Even if you ever feel lost or the path gets narrow, just know that I will always be your fellow traveler, even if it annoys you</div>
+        <div class="dialogue-box hidden" id="message7">At the end, just take a moment to realize just how special you are; nor Cohen's philosophy, nor all of those scary equations combined, nor all those holy texts combined can define just how special you are!!!</div>
+        <button class="button" id="nextButton">Next</button>
+    </div>
+
+    <script>
+        const messages = document.querySelectorAll('.dialogue-box');
+       
