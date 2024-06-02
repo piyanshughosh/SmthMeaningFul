@@ -71,8 +71,8 @@
 <body>
     <!-- Audio element for the song -->
     <audio autoplay loop>
-        <!-- Source of the audio file hosted on the web -->
-        <source src="https://github.com/piyanshughosh/SmthMeaningFul/blob/4e4067a2bd0fa0e623be8b7973da9922531838de/the_night_we_met_-_lord_huron_(Hydr0.org).mp3" type="audio/mpeg">
+        <!-- Source of the audio file hosted on GitHub -->
+        <source src="https://github.com/piyanshughosh/SmthMeaningFul/blob/0f49d4170407b0a0b68e2ffb6fe76becc76a1887/the_night_we_met_-_lord_huron_(Hydr0.org).mp3">
         <!-- Fallback text in case the audio file is not found -->
         Your browser does not support the audio element.
     </audio>
@@ -91,4 +91,22 @@
 
     <script>
         const messages = document.querySelectorAll('.dialogue-box');
-       
+        const nextButton = document.getElementById('nextButton');
+        let currentIndex = 0;
+
+        function showNextMessage() {
+            if (currentIndex < messages.length - 1) {
+                messages[currentIndex].classList.add('hidden');
+                currentIndex++;
+                messages[currentIndex].classList.remove('hidden');
+            }
+
+            if (currentIndex === messages.length - 1) {
+                nextButton.classList.add('hidden');
+            }
+        }
+
+        nextButton.addEventListener('click', showNextMessage);
+    </script>
+</body>
+</html>
